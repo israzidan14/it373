@@ -1,0 +1,378 @@
+jdebettencourt:~/workspace $ cd code
+jdebettencourt:~/workspace/code $ git init
+Initialized empty Git repository in /home/ubuntu/workspace/code/.git/
+jdebettencourt:~/workspace/code (master) $ git add .
+jdebettencourt:~/workspace/code (master) $ git commit -m "first commit"
+[master (root-commit) bf8bdc7] first commit
+ 4 files changed, 900 insertions(+)
+ create mode 100755 repeat
+ create mode 100644 repeat.c
+ create mode 100644 repeat.i
+ create mode 100644 repeat.s
+jdebettencourt:~/workspace/code (master) $ git remote add origin https://github.com/jdebettencourt/it373spring1617.git
+jdebettencourt:~/workspace/code (master) $ git push origin master
+Username for 'https://github.com': jdebettencourt
+Password for 'https://jdebettencourt@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 6.00 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/jdebettencourt/it373spring1617.git
+ * [new branch]      master -> master
+jdebettencourt:~/workspace/code (master) $ ./repeat
+246
+jdebettencourt:~/workspace/code (master) $ gdb
+GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.2) 7.7.1
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) file repeat
+Reading symbols from repeat...(no debugging symbols found)...done.
+(gdb) info file
+Symbols from "/home/ubuntu/workspace/code/repeat".
+Local exec file:
+        `/home/ubuntu/workspace/code/repeat', file type elf64-x86-64.
+        Entry point: 0x400440
+        0x0000000000400238 - 0x0000000000400254 is .interp
+        0x0000000000400254 - 0x0000000000400274 is .note.ABI-tag
+        0x0000000000400274 - 0x0000000000400298 is .note.gnu.build-id
+        0x0000000000400298 - 0x00000000004002b4 is .gnu.hash
+        0x00000000004002b8 - 0x0000000000400318 is .dynsym
+        0x0000000000400318 - 0x0000000000400357 is .dynstr
+        0x0000000000400358 - 0x0000000000400360 is .gnu.version
+        0x0000000000400360 - 0x0000000000400380 is .gnu.version_r
+        0x0000000000400380 - 0x0000000000400398 is .rela.dyn
+        0x0000000000400398 - 0x00000000004003e0 is .rela.plt
+        0x00000000004003e0 - 0x00000000004003fa is .init
+        0x0000000000400400 - 0x0000000000400440 is .plt
+        0x0000000000400440 - 0x00000000004005e2 is .text
+        0x00000000004005e4 - 0x00000000004005ed is .fini
+        0x00000000004005f0 - 0x00000000004005f9 is .rodata
+        0x00000000004005fc - 0x0000000000400630 is .eh_frame_hdr
+        0x0000000000400630 - 0x0000000000400724 is .eh_frame
+        0x0000000000600e10 - 0x0000000000600e18 is .init_array
+        0x0000000000600e18 - 0x0000000000600e20 is .fini_array
+        0x0000000000600e20 - 0x0000000000600e28 is .jcr
+        0x0000000000600e28 - 0x0000000000600ff8 is .dynamic
+        0x0000000000600ff8 - 0x0000000000601000 is .got
+        0x0000000000601000 - 0x0000000000601030 is .got.plt
+        0x0000000000601030 - 0x0000000000601040 is .data
+        0x0000000000601040 - 0x0000000000601048 is .bss
+(gdb) break *0x400440
+Breakpoint 1 at 0x400440
+(gdb) run
+Starting program: /home/ubuntu/workspace/code/repeat 
+
+Breakpoint 1, 0x0000000000400440 in _start ()
+(gdb) x/i $pc
+=> 0x400440 <_start>:   xor    %ebp,%ebp
+(gdb) x/16i
+   0x400442 <_start+2>: mov    %rdx,%r9
+   0x400445 <_start+5>: pop    %rsi
+   0x400446 <_start+6>: mov    %rsp,%rdx
+   0x400449 <_start+9>: and    $0xfffffffffffffff0,%rsp
+   0x40044d <_start+13>:        push   %rax
+   0x40044e <_start+14>:        push   %rsp
+   0x40044f <_start+15>:        mov    $0x4005e0,%r8
+   0x400456 <_start+22>:        mov    $0x400570,%rcx
+   0x40045d <_start+29>:        mov    $0x40052d,%rdi
+   0x400464 <_start+36>:        callq  0x400420 <__libc_start_main@plt>
+   0x400469 <_start+41>:        hlt    
+   0x40046a <_start+42>:        nopw   0x0(%rax,%rax,1)
+   0x400470 <deregister_tm_clones>:     mov    $0x601047,%eax
+   0x400475 <deregister_tm_clones+5>:   push   %rbp
+   0x400476 <deregister_tm_clones+6>:   sub    $0x601040,%rax
+   0x40047c <deregister_tm_clones+12>:  cmp    $0xe,%rax
+(gdb) b *0x40052d
+Breakpoint 2 at 0x40052d
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x000000000040052d in main ()
+(gdb) x/16i
+   0x400480 <deregister_tm_clones+16>:  mov    %rsp,%rbp
+   0x400483 <deregister_tm_clones+19>:  ja     0x400487 <deregister_tm_clones+23>
+   0x400485 <deregister_tm_clones+21>:  pop    %rbp
+   0x400486 <deregister_tm_clones+22>:  retq   
+   0x400487 <deregister_tm_clones+23>:  mov    $0x0,%eax
+   0x40048c <deregister_tm_clones+28>:  test   %rax,%rax
+   0x40048f <deregister_tm_clones+31>:  je     0x400485 <deregister_tm_clones+21>
+   0x400491 <deregister_tm_clones+33>:  pop    %rbp
+   0x400492 <deregister_tm_clones+34>:  mov    $0x601040,%edi
+   0x400497 <deregister_tm_clones+39>:  jmpq   *%rax
+   0x400499 <deregister_tm_clones+41>:  nopl   0x0(%rax)
+   0x4004a0 <register_tm_clones>:       mov    $0x601040,%eax
+   0x4004a5 <register_tm_clones+5>:     push   %rbp
+   0x4004a6 <register_tm_clones+6>:     sub    $0x601040,%rax
+   0x4004ac <register_tm_clones+12>:    sar    $0x3,%rax
+   0x4004b0 <register_tm_clones+16>:    mov    %rsp,%rbp
+(gdb) p/x $pc
+$1 = 0x40052d
+(gdb) x/16i $pc
+=> 0x40052d <main>:     push   %rbp
+   0x40052e <main+1>:   mov    %rsp,%rbp
+   0x400531 <main+4>:   sub    $0x10,%rsp
+   0x400535 <main+8>:   movl   $0x7b,-0x8(%rbp)
+   0x40053c <main+15>:  movl   $0x0,-0x4(%rbp)
+   0x400543 <main+22>:  mov    -0x8(%rbp),%eax
+   0x400546 <main+25>:  add    %eax,-0x4(%rbp)
+   0x400549 <main+28>:  mov    -0x8(%rbp),%eax
+   0x40054c <main+31>:  add    %eax,-0x4(%rbp)
+   0x40054f <main+34>:  mov    -0x4(%rbp),%eax
+   0x400552 <main+37>:  mov    %eax,%esi
+   0x400554 <main+39>:  mov    $0x4005f4,%edi
+   0x400559 <main+44>:  mov    $0x0,%eax
+   0x40055e <main+49>:  callq  0x400410 <printf@plt>
+   0x400563 <main+54>:  mov    $0x0,%eax
+   0x400568 <main+59>:  leaveq 
+(gdb) x/24i $pc                                                                                              
+=> 0x40052d <main>:     push   %rbp
+   0x40052e <main+1>:   mov    %rsp,%rbp
+   0x400531 <main+4>:   sub    $0x10,%rsp
+   0x400535 <main+8>:   movl   $0x7b,-0x8(%rbp)
+   0x40053c <main+15>:  movl   $0x0,-0x4(%rbp)
+   0x400543 <main+22>:  mov    -0x8(%rbp),%eax
+   0x400546 <main+25>:  add    %eax,-0x4(%rbp)
+   0x400549 <main+28>:  mov    -0x8(%rbp),%eax
+   0x40054c <main+31>:  add    %eax,-0x4(%rbp)
+   0x40054f <main+34>:  mov    -0x4(%rbp),%eax
+   0x400552 <main+37>:  mov    %eax,%esi
+   0x400554 <main+39>:  mov    $0x4005f4,%edi
+   0x400559 <main+44>:  mov    $0x0,%eax
+   0x40055e <main+49>:  callq  0x400410 <printf@plt>
+   0x400563 <main+54>:  mov    $0x0,%eax
+   0x400568 <main+59>:  leaveq 
+   0x400569 <main+60>:  retq   
+   0x40056a:    nopw   0x0(%rax,%rax,1)
+   0x400570 <__libc_csu_init>:  push   %r15
+   0x400572 <__libc_csu_init+2>:        mov    %edi,%r15d
+   0x400575 <__libc_csu_init+5>:        push   %r14
+   0x400577 <__libc_csu_init+7>:        mov    %rsi,%r14
+   0x40057a <__libc_csu_init+10>:       push   %r13
+   0x40057c <__libc_csu_init+12>:       mov    %rdx,%r13
+(gdb) b *0x400546
+Breakpoint 3 at 0x400546
+(gdb) info registers
+rax            0x40052d 4195629
+rbx            0x0      0
+rcx            0x0      0
+rdx            0x7fffffffe1d8   140737488347608
+rsi            0x7fffffffe1c8   140737488347592
+rdi            0x1      1
+rbp            0x0      0x0
+rsp            0x7fffffffe0e8   0x7fffffffe0e8
+r8             0x7ffff7dd4e80   140737351863936
+r9             0x7ffff7dea530   140737351951664
+r10            0x7fffffffdf70   140737488346992
+r11            0x7ffff7a36e50   140737348070992
+r12            0x400440 4195392
+r13            0x7fffffffe1c0   140737488347584
+r14            0x0      0
+r15            0x0      0
+rip            0x40052d 0x40052d <main>
+eflags         0x246    [ PF ZF IF ]
+cs             0x33     51
+ss             0x2b     43
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0000000000400546 in main ()
+(gdb) info registers
+rax            0x7b     123
+rbx            0x0      0
+rcx            0x0      0
+rdx            0x7fffffffe1d8   140737488347608
+rsi            0x7fffffffe1c8   140737488347592
+rdi            0x1      1
+rbp            0x7fffffffe0e0   0x7fffffffe0e0
+rsp            0x7fffffffe0d0   0x7fffffffe0d0
+r8             0x7ffff7dd4e80   140737351863936
+r9             0x7ffff7dea530   140737351951664
+r10            0x7fffffffdf70   140737488346992
+r11            0x7ffff7a36e50   140737348070992
+r12            0x400440 4195392
+r13            0x7fffffffe1c0   140737488347584
+r14            0x0      0
+r15            0x0      0
+rip            0x400546 0x400546 <main+25>
+eflags         0x202    [ IF ]
+cs             0x33     51
+ss             0x2b     43
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+(gdb) b *0x400552
+Breakpoint 4 at 0x400552
+(gdb) c
+Continuing.
+
+Breakpoint 4, 0x0000000000400552 in main ()
+(gdb) info registers
+rax            0xf6     246
+rbx            0x0      0
+rcx            0x0      0
+rdx            0x7fffffffe1d8   140737488347608
+rsi            0x7fffffffe1c8   140737488347592
+rdi            0x1      1
+rbp            0x7fffffffe0e0   0x7fffffffe0e0
+rsp            0x7fffffffe0d0   0x7fffffffe0d0
+r8             0x7ffff7dd4e80   140737351863936
+r9             0x7ffff7dea530   140737351951664
+r10            0x7fffffffdf70   140737488346992
+r11            0x7ffff7a36e50   140737348070992
+r12            0x400440 4195392
+r13            0x7fffffffe1c0   140737488347584
+r14            0x0      0
+r15            0x0      0
+rip            0x400552 0x400552 <main+37>
+eflags         0x216    [ PF AF IF ]
+cs             0x33     51
+ss             0x2b     43
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+(gdb) b *0x400559
+Breakpoint 5 at 0x400559
+(gdb) c
+Continuing.
+
+Breakpoint 5, 0x0000000000400559 in main ()
+(gdb) info all-registers
+rax            0xf6     246
+rbx            0x0      0
+rcx            0x0      0
+rdx            0x7fffffffe1d8   140737488347608
+rsi            0xf6     246
+rdi            0x4005f4 4195828
+rbp            0x7fffffffe0e0   0x7fffffffe0e0
+rsp            0x7fffffffe0d0   0x7fffffffe0d0
+r8             0x7ffff7dd4e80   140737351863936
+r9             0x7ffff7dea530   140737351951664
+r10            0x7fffffffdf70   140737488346992
+r11            0x7ffff7a36e50   140737348070992
+r12            0x400440 4195392
+r13            0x7fffffffe1c0   140737488347584
+r14            0x0      0
+r15            0x0      0
+rip            0x400559 0x400559 <main+44>
+eflags         0x216    [ PF AF IF ]
+cs             0x33     51
+ss             0x2b     43
+ds             0x0      0
+es             0x0      0
+fs             0x0      0
+gs             0x0      0
+st0            0        (raw 0x00000000000000000000)
+st1            0        (raw 0x00000000000000000000)
+st2            0        (raw 0x00000000000000000000)
+st3            0        (raw 0x00000000000000000000)
+st4            0        (raw 0x00000000000000000000)
+st5            0        (raw 0x00000000000000000000)
+---Type <return> to continue, or q <return> to quit---
+st6            0        (raw 0x00000000000000000000)
+st7            0        (raw 0x00000000000000000000)
+fctrl          0x37f    895
+fstat          0x0      0
+ftag           0xffff   65535
+fiseg          0x0      0
+fioff          0x0      0
+foseg          0x0      0
+fooff          0x0      0
+fop            0x0      0
+mxcsr          0x1f80   [ IM DM ZM OM UM PM ]
+ymm0           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 
+    0x8000000000000000, 0x0, 0x0}, v32_int8 = {0x0, 0x0, 0x0, 0xff, 0x0, 0x0, 0x0, 0x0, 0xff, 
+    0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0xff, 0x0 <repeats 16 times>}, v16_int16 = {0x0, 0xff00, 
+    0x0, 0x0, 0xff, 0x0, 0x0, 0xff00, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v8_int32 = {
+    0xff000000, 0x0, 0xff, 0xff000000, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0xff000000, 
+    0xff000000000000ff, 0x0, 0x0}, v2_int128 = {0xff000000000000ff00000000ff000000, 
+    0x00000000000000000000000000000000}}
+ymm1           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x2f <repeats 16 times>, 0x0 <repeats 16 times>}, v16_int16 = {
+    0x2f2f, 0x2f2f, 0x2f2f, 0x2f2f, 0x2f2f, 0x2f2f, 0x2f2f, 0x2f2f, 0x0, 0x0, 0x0, 0x0, 0x0, 
+    0x0, 0x0, 0x0}, v8_int32 = {0x2f2f2f2f, 0x2f2f2f2f, 0x2f2f2f2f, 0x2f2f2f2f, 0x0, 0x0, 
+    0x0, 0x0}, v4_int64 = {0x2f2f2f2f2f2f2f2f, 0x2f2f2f2f2f2f2f2f, 0x0, 0x0}, v2_int128 = {
+    0x2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f2f, 0x00000000000000000000000000000000}}
+ymm2           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm3           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+---Type <return> to continue, or q <return> to quit---~
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm4           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0xff, 0x0, 0x0, 0x0, 0x0, 0xff, 
+    0x0 <repeats 20 times>}, v16_int16 = {0x0, 0x0, 0x0, 0xff, 0x0, 0xff00, 0x0, 0x0, 0x0, 
+    0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v8_int32 = {0x0, 0xff0000, 0xff000000, 0x0, 0x0, 0x0, 
+    0x0, 0x0}, v4_int64 = {0xff000000000000, 0xff000000, 0x0, 0x0}, v2_int128 = {
+    0x00000000ff00000000ff000000000000, 0x00000000000000000000000000000000}}
+ymm5           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0, 0x0, 0xff, 0x0 <repeats 29 times>}, v16_int16 = {0x0, 0xff, 
+    0x0 <repeats 14 times>}, v8_int32 = {0xff0000, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, 
+  v4_int64 = {0xff0000, 0x0, 0x0, 0x0}, v2_int128 = {0x00000000000000000000000000ff0000, 
+    0x00000000000000000000000000000000}}
+ymm6           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm7           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm8           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm9           {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm10          {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+---Type <return> to continue, or q <return> to quit---
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm11          {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm12          {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm13          {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm14          {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+ymm15          {v8_float = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_double = {0x0, 0x0, 
+    0x0, 0x0}, v32_int8 = {0x0 <repeats 32 times>}, v16_int16 = {0x0 <repeats 16 times>}, 
+  v8_int32 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, v4_int64 = {0x0, 0x0, 0x0, 0x0}, 
+  v2_int128 = {0x00000000000000000000000000000000, 0x00000000000000000000000000000000}}
+(gdb) c
+Continuing.
+246
+[Inferior 1 (process 6827) exited normally]
+(gdb) 

@@ -1,0 +1,209 @@
+jdebettencourt:~/workspace $ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   1108     0 ?        Ss   Apr04   0:04 /mnt/shared/sbin/tini -- /mn
+root           7  0.0  0.0   4056   236 ?        S+   Apr04   0:00 /mnt/shared/sbin/micro-inetd
+ubuntu       965  0.0  0.0 133008  2980 ?        Rs   Apr04   0:00 /mnt/shared/sbin/tmux -u2 -L
+ubuntu       970  0.0  0.0  11252  2116 pts/1    Ss   Apr04   0:00 bash -c export ISOUTPUTPANE=
+ubuntu       973  0.0  0.0  29072 11988 pts/1    S+   Apr04   0:00 bash -l
+root        3774  0.0  0.0  19380  2140 ?        Ss   15:22   0:00 /mnt/shared/sbin/dropbear -i
+ubuntu      3775  0.0  0.0 1250048 46884 ?       Sl   15:22   0:04 vfs-worker {"pingInterval":5
+ubuntu      4718  0.0  0.0  11252  2544 pts/3    Ss   15:48   0:00 bash -c export ISOUTPUTPANE=
+ubuntu      4719  0.0  0.0  29024 12736 pts/3    S+   15:48   0:00 bash -l
+root        5415  0.0  0.0  19380  2240 ?        Ss   17:08   0:00 /mnt/shared/sbin/dropbear -i
+ubuntu      5416  0.1  0.0 1255848 34188 ?       Rl   17:08   0:01 vfs-worker {"pingInterval":5
+ubuntu      5689  0.0  0.0 123740  2736 pts/4    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L
+ubuntu      5870  0.0  0.0 123740  2656 pts/5    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L
+ubuntu      6304  0.0  0.0 123740  2660 pts/0    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L
+ubuntu      6306  0.0  0.0  11252  2584 pts/2    Ss   17:08   0:00 bash -c export ISOUTPUTPANE=
+ubuntu      6307  0.0  0.0  29024 12852 pts/2    S    17:08   0:00 bash -l
+ubuntu      6819  0.0  0.0  58236 28028 pts/2    S+   17:19   0:00 gdb
+ubuntu      6827  0.0  0.0   4196   652 pts/2    t    17:23   0:00 /home/ubuntu/workspace/code/
+ubuntu      6831  0.0  0.0 123740  2608 pts/6    Ss+  17:24   0:00 /mnt/shared/sbin/tmux -u2 -L
+ubuntu      6833  0.0  0.0  11252  2700 pts/7    Ss   17:24   0:00 bash -c export ISOUTPUTPANE=
+ubuntu      6834  2.0  0.0  29024 12756 pts/7    S    17:24   0:00 bash -l
+ubuntu      7281  0.0  0.0  17256  2348 pts/7    R+   17:24   0:00 ps aux
+jdebettencourt:~/workspace $ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   1108     0 ?        Ss   Apr04   0:04 /mnt/shared/sbin/tini -- /mnt/shared/sbin/
+root           7  0.0  0.0   4056   236 ?        S+   Apr04   0:00 /mnt/shared/sbin/micro-inetd 22 /mnt/share
+ubuntu       965  0.0  0.0 133008  2980 ?        Rs   Apr04   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 new
+ubuntu       970  0.0  0.0  11252  2116 pts/1    Ss   Apr04   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu       973  0.0  0.0  29072 11988 pts/1    S+   Apr04   0:00 bash -l
+root        3774  0.0  0.0  19380  2140 ?        Ss   15:22   0:00 /mnt/shared/sbin/dropbear -i -s -m -R
+ubuntu      3775  0.0  0.0 1250048 46348 ?       Sl   15:22   0:04 vfs-worker {"pingInterval":5000,"nodePath"
+ubuntu      4718  0.0  0.0  11252  2544 pts/3    Ss   15:48   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu      4719  0.0  0.0  29024 12736 pts/3    S+   15:48   0:00 bash -l
+root        5415  0.0  0.0  19380  2240 ?        Ss   17:08   0:00 /mnt/shared/sbin/dropbear -i -s -m -R
+ubuntu      5416  0.1  0.0 1255848 34688 ?       Rl   17:08   0:01 vfs-worker {"pingInterval":5000,"nodePath"
+ubuntu      5689  0.0  0.0 123740  2732 pts/4    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 att
+ubuntu      5870  0.0  0.0 123740  2652 pts/5    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 att
+ubuntu      6304  0.0  0.0 123740  2656 pts/0    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 new
+ubuntu      6306  0.0  0.0  11252  2584 pts/2    Ss   17:08   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu      6307  0.0  0.0  29024 12852 pts/2    S    17:08   0:00 bash -l
+ubuntu      6819  0.0  0.0  58236 28028 pts/2    S+   17:19   0:00 gdb
+ubuntu      6827  0.0  0.0   4196   652 pts/2    t    17:23   0:00 /home/ubuntu/workspace/code/repeat
+ubuntu      6831  0.0  0.0 123740  2604 pts/6    Ss+  17:24   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 new
+ubuntu      6833  0.0  0.0  11252  2700 pts/7    Ss   17:24   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu      6834  0.5  0.0  29024 12784 pts/7    S    17:24   0:00 bash -l
+ubuntu      7288  0.0  0.0  17256  2408 pts/7    R+   17:24   0:00 ps aux
+jdebettencourt:~/workspace $ pmap 6827
+6827:   /home/ubuntu/workspace/code/repeat
+0000000000400000      4K r-x-- repeat
+0000000000600000      4K r---- repeat
+0000000000601000      4K rw--- repeat
+00007ffff7a15000   1768K r-x-- libc-2.19.so
+00007ffff7bcf000   2048K ----- libc-2.19.so
+00007ffff7dcf000     16K r---- libc-2.19.so
+00007ffff7dd3000      8K rw--- libc-2.19.so
+00007ffff7dd5000     20K rw---   [ anon ]
+00007ffff7dda000    140K r-x-- ld-2.19.so
+00007ffff7fe4000     12K rw---   [ anon ]
+00007ffff7ff6000      8K rw---   [ anon ]
+00007ffff7ff8000      8K r----   [ anon ]
+00007ffff7ffa000      8K r-x--   [ anon ]
+00007ffff7ffc000      4K r---- ld-2.19.so
+00007ffff7ffd000      4K rw--- ld-2.19.so
+00007ffff7ffe000      4K rw---   [ anon ]
+00007ffffffde000    132K rw---   [ stack ]
+ffffffffff600000      4K r-x--   [ anon ]
+ total             4196K
+jdebettencourt:~/workspace $ cat /proc/6827/maps
+00400000-00401000 r-xp 00000000 00:9fe 997                               /home/ubuntu/workspace/code/repeat
+00600000-00601000 r--p 00000000 00:9fe 997                               /home/ubuntu/workspace/code/repeat
+00601000-00602000 rw-p 00001000 00:9fe 997                               /home/ubuntu/workspace/code/repeat
+7ffff7a15000-7ffff7bcf000 r-xp 00000000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7ffff7bcf000-7ffff7dcf000 ---p 001ba000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7ffff7dcf000-7ffff7dd3000 r--p 001ba000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7ffff7dd3000-7ffff7dd5000 rw-p 001be000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7ffff7dd5000-7ffff7dda000 rw-p 00000000 00:00 0 
+7ffff7dda000-7ffff7dfd000 r-xp 00000000 00:9fe 73                        /lib/x86_64-linux-gnu/ld-2.19.so
+7ffff7fe4000-7ffff7fe7000 rw-p 00000000 00:00 0 
+7ffff7ff6000-7ffff7ff8000 rw-p 00000000 00:00 0 
+7ffff7ff8000-7ffff7ffa000 r--p 00000000 00:00 0                          [vvar]
+7ffff7ffa000-7ffff7ffc000 r-xp 00000000 00:00 0                          [vdso]
+7ffff7ffc000-7ffff7ffd000 r--p 00022000 00:9fe 73                        /lib/x86_64-linux-gnu/ld-2.19.so
+7ffff7ffd000-7ffff7ffe000 rw-p 00023000 00:9fe 73                        /lib/x86_64-linux-gnu/ld-2.19.so
+7ffff7ffe000-7ffff7fff000 rw-p 00000000 00:00 0 
+7ffffffde000-7ffffffff000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+jdebettencourt:~/workspace $ cat /proc/6819/maps
+00400000-00962000 r-xp 00000000 00:9fe 412                               /usr/bin/gdb
+00b61000-00b62000 r--p 00561000 00:9fe 412                               /usr/bin/gdb
+00b62000-00b75000 rw-p 00562000 00:9fe 412                               /usr/bin/gdb
+00b75000-00b94000 rw-p 00000000 00:00 0 
+01b5b000-020c3000 rw-p 00000000 00:00 0                                  [heap]
+7f7379a3e000-7f7379b0b000 rw-p 00000000 00:00 0 
+7f7379b0b000-7f7379b56000 r--p 007df000 00:9fe 1012                      /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so
+7f7379b56000-7f7379c19000 r--p 004b0000 00:9fe 1012                      /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so
+7f7379c19000-7f7379cb8000 r--p 00412000 00:9fe 1012                      /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so
+7f7379cb8000-7f737a0ba000 r--p 00011000 00:9fe 1012                      /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so
+7f737a0ba000-7f737a1e6000 rw-p 00000000 00:00 0 
+7f737a22c000-7f737a252000 r--p 00572000 00:9fe 1012                      /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so
+7f737a252000-7f737a2af000 rw-p 00000000 00:00 0 
+7f737a2af000-7f737a2e3000 r--p 0006c000 00:9fe 1005                      /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so
+7f737a2e3000-7f737a2f1000 r--p 0005a000 00:9fe 1005                      /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so
+7f737a2f1000-7f737a2fa000 r--p 0009f000 00:9fe 1005                      /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so
+7f737a2fa000-7f737a300000 r--p 00067000 00:9fe 1005                      /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so
+7f737a300000-7f737a351000 r--p 00001000 00:9fe 1005                      /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so
+7f737a351000-7f737a602000 rw-p 00000000 00:00 0 
+7f737a602000-7f737a604000 r-xp 00000000 00:9fe 423                       /lib/x86_64-linux-gnu/libutil-2.19.so
+7f737a604000-7f737a803000 ---p 00002000 00:9fe 423                       /lib/x86_64-linux-gnu/libutil-2.19.so
+7f737a803000-7f737a804000 r--p 00001000 00:9fe 423                       /lib/x86_64-linux-gnu/libutil-2.19.so
+7f737a804000-7f737a805000 rw-p 00002000 00:9fe 423                       /lib/x86_64-linux-gnu/libutil-2.19.so
+7f737a805000-7f737a9bf000 r-xp 00000000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7f737a9bf000-7f737abbf000 ---p 001ba000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7f737abbf000-7f737abc3000 r--p 001ba000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7f737abc3000-7f737abc5000 rw-p 001be000 00:9fe 80                        /lib/x86_64-linux-gnu/libc-2.19.so
+7f737abc5000-7f737abca000 rw-p 00000000 00:00 0 
+7f737abca000-7f737abeb000 r-xp 00000000 00:9fe 421                       /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f737abeb000-7f737adea000 ---p 00021000 00:9fe 421                       /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f737adea000-7f737adeb000 r--p 00020000 00:9fe 421                       /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f737adeb000-7f737adec000 rw-p 00021000 00:9fe 421                       /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f737adec000-7f737ae13000 r-xp 00000000 00:9fe 419                       /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f737ae13000-7f737b013000 ---p 00027000 00:9fe 419                       /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f737b013000-7f737b015000 r--p 00027000 00:9fe 419                       /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f737b015000-7f737b016000 rw-p 00029000 00:9fe 419                       /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f737b016000-7f737b3a1000 r-xp 00000000 00:9fe 417                       /usr/lib/x86_64-linux-gnu/libpython3.4m.so.1.0
+7f737b3a1000-7f737b5a1000 ---p 0038b000 00:9fe 417                       /usr/lib/x86_64-linux-gnu/libpython3.4m.so.1.0
+7f737b5a1000-7f737b5a3000 r--p 0038b000 00:9fe 417                       /usr/lib/x86_64-linux-gnu/libpython3.4m.so.1.0
+7f737b5a3000-7f737b62f000 rw-p 0038d000 00:9fe 417                       /usr/lib/x86_64-linux-gnu/libpython3.4m.so.1.0
+7f737b62f000-7f737b64b000 rw-p 00000000 00:00 0 
+7f737b64b000-7f737b664000 r-xp 00000000 00:9fe 236                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f737b664000-7f737b863000 ---p 00019000 00:9fe 236                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f737b863000-7f737b864000 r--p 00018000 00:9fe 236                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f737b864000-7f737b865000 rw-p 00019000 00:9fe 236                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f737b865000-7f737b869000 rw-p 00000000 00:00 0 
+7f737b869000-7f737b96e000 r-xp 00000000 00:9fe 164                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f737b96e000-7f737bb6d000 ---p 00105000 00:9fe 164                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f737bb6d000-7f737bb6e000 r--p 00104000 00:9fe 164                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f737bb6e000-7f737bb6f000 rw-p 00105000 00:9fe 164                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f737bb6f000-7f737bb87000 r-xp 00000000 00:9fe 260                       /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f737bb87000-7f737bd86000 ---p 00018000 00:9fe 260                       /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f737bd86000-7f737bd87000 r--p 00017000 00:9fe 260                       /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f737bd87000-7f737bd88000 rw-p 00018000 00:9fe 260                       /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f737bd88000-7f737bdad000 r-xp 00000000 00:9fe 76                        /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7f737bdad000-7f737bfac000 ---p 00025000 00:9fe 76                        /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7f737bfac000-7f737bfb0000 r--p 00024000 00:9fe 76                        /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7f737bfb0000-7f737bfb1000 rw-p 00028000 00:9fe 76                        /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7f737bfb1000-7f737bfd3000 r-xp 00000000 00:9fe 416                       /lib/x86_64-linux-gnu/libncurses.so.5.9
+7f737bfd3000-7f737c1d2000 ---p 00022000 00:9fe 416                       /lib/x86_64-linux-gnu/libncurses.so.5.9
+7f737c1d2000-7f737c1d3000 r--p 00021000 00:9fe 416                       /lib/x86_64-linux-gnu/libncurses.so.5.9
+7f737c1d3000-7f737c1d4000 rw-p 00022000 00:9fe 416                       /lib/x86_64-linux-gnu/libncurses.so.5.9
+7f737c1d4000-7f737c1d7000 r-xp 00000000 00:9fe 78                        /lib/x86_64-linux-gnu/libdl-2.19.so
+7f737c1d7000-7f737c3d6000 ---p 00003000 00:9fe 78                        /lib/x86_64-linux-gnu/libdl-2.19.so
+7f737c3d6000-7f737c3d7000 r--p 00002000 00:9fe 78                        /lib/x86_64-linux-gnu/libdl-2.19.so
+7f737c3d7000-7f737c3d8000 rw-p 00003000 00:9fe 78                        /lib/x86_64-linux-gnu/libdl-2.19.so
+7f737c3d8000-7f737c415000 r-xp 00000000 00:9fe 414                       /lib/x86_64-linux-gnu/libreadline.so.6.3
+7f737c415000-7f737c615000 ---p 0003d000 00:9fe 414                       /lib/x86_64-linux-gnu/libreadline.so.6.3
+7f737c615000-7f737c617000 r--p 0003d000 00:9fe 414                       /lib/x86_64-linux-gnu/libreadline.so.6.3
+7f737c617000-7f737c61d000 rw-p 0003f000 00:9fe 414                       /lib/x86_64-linux-gnu/libreadline.so.6.3
+7f737c61d000-7f737c61e000 rw-p 00000000 00:00 0 
+7f737c61e000-7f737c641000 r-xp 00000000 00:9fe 73                        /lib/x86_64-linux-gnu/ld-2.19.so
+7f737c641000-7f737c64b000 r--p 00051000 00:9fe 1005                      /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so
+7f737c64e000-7f737c691000 rw-p 00000000 00:00 0 
+7f737c691000-7f737c692000 r--p 00000000 00:9fe 111                       /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7f737c692000-7f737c693000 r--p 00000000 00:9fe 110                       /usr/lib/locale/C.UTF-8/LC_TIME
+7f737c693000-7f737c802000 r--p 00000000 00:9fe 109                       /usr/lib/locale/C.UTF-8/LC_COLLATE
+7f737c802000-7f737c828000 r--p 00000000 00:9fe 112                       /usr/lib/locale/C.UTF-8/LC_CTYPE
+7f737c828000-7f737c82f000 rw-p 00000000 00:00 0 
+7f737c82f000-7f737c830000 r--p 00000000 00:9fe 108                       /usr/lib/locale/C.UTF-8/LC_MONETARY
+7f737c830000-7f737c831000 r--p 00000000 00:9fe 105                       /usr/lib/locale/C.UTF-8/LC_PAPER
+7f737c831000-7f737c832000 r--p 00000000 00:9fe 104                       /usr/lib/locale/C.UTF-8/LC_NAME
+7f737c832000-7f737c833000 r--p 00000000 00:9fe 103                       /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7f737c833000-7f737c834000 r--p 00000000 00:9fe 102                       /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7f737c834000-7f737c835000 r--p 00000000 00:9fe 101                       /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7f737c835000-7f737c836000 r--p 00000000 00:9fe 97                        /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7f737c836000-7f737c83d000 r--s 00000000 00:9fe 100                       /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f737c83d000-7f737c83e000 r--p 00000000 00:9fe 107                       /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7f737c83e000-7f737c840000 rw-p 00000000 00:00 0 
+7f737c840000-7f737c841000 r--p 00022000 00:9fe 73                        /lib/x86_64-linux-gnu/ld-2.19.so
+7f737c841000-7f737c842000 rw-p 00023000 00:9fe 73                        /lib/x86_64-linux-gnu/ld-2.19.so
+7f737c842000-7f737c843000 rw-p 00000000 00:00 0 
+7fff0a0f1000-7fff0a112000 rw-p 00000000 00:00 0                          [stack]
+7fff0a177000-7fff0a179000 r--p 00000000 00:00 0                          [vvar]
+7fff0a179000-7fff0a17b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+jdebettencourt:~/workspace $ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   1108     0 ?        Ss   Apr04   0:04 /mnt/shared/sbin/tini -- /mnt/shared/sbin/
+root           7  0.0  0.0   4056   236 ?        S+   Apr04   0:00 /mnt/shared/sbin/micro-inetd 22 /mnt/share
+ubuntu       965  0.0  0.0 133140  2980 ?        Rs   Apr04   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 new
+ubuntu       970  0.0  0.0  11252  2116 pts/1    Ss   Apr04   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu       973  0.0  0.0  29072 11948 pts/1    S+   Apr04   0:00 bash -l
+root        3774  0.0  0.0  19380  2140 ?        Ss   15:22   0:00 /mnt/shared/sbin/dropbear -i -s -m -R
+ubuntu      3775  0.0  0.0 1252096 48320 ?       Sl   15:22   0:05 vfs-worker {"pingInterval":5000,"nodePath"
+ubuntu      4718  0.0  0.0  11252  2544 pts/3    Ss   15:48   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu      4719  0.0  0.0  29024 12736 pts/3    S+   15:48   0:00 bash -l
+root        5415  0.0  0.0  19380  2240 ?        Ss   17:08   0:00 /mnt/shared/sbin/dropbear -i -s -m -R
+ubuntu      5416  0.0  0.0 1257896 37408 ?       Rl   17:08   0:01 vfs-worker {"pingInterval":5000,"nodePath"
+ubuntu      5689  0.0  0.0 123740  2732 pts/4    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 att
+ubuntu      5870  0.0  0.0 123740  2652 pts/5    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 att
+ubuntu      6304  0.0  0.0 123740  2656 pts/0    Ss+  17:08   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 new
+ubuntu      6306  0.0  0.0  11252  2584 pts/2    Ss   17:08   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu      6307  0.0  0.0  29024 12852 pts/2    S    17:08   0:00 bash -l
+ubuntu      6819  0.0  0.0  58236 27896 pts/2    S+   17:19   0:00 gdb
+ubuntu      6831  0.0  0.0 123740  2604 pts/6    Ss+  17:24   0:00 /mnt/shared/sbin/tmux -u2 -L cloud92.2 new
+ubuntu      6833  0.0  0.0  11252  2700 pts/7    Ss   17:24   0:00 bash -c export ISOUTPUTPANE=0;bash -l
+ubuntu      6834  0.0  0.0  29024 12784 pts/7    S    17:24   0:00 bash -l
+ubuntu      7357  0.0  0.0  17256  2460 pts/7    R+   17:59   0:00 ps aux
+jdebettencourt:~/workspace $ 
